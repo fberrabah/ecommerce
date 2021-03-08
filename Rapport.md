@@ -130,3 +130,37 @@ Limit 5 info
 | alimento_bebidas          | 278                  |
 | artes                     | 209                  |
 
+
+
+
+
+**Question 12 **:    Nombre de commande par jours
+
+
+
+**Question 13** :    durée moyenne entre la commande et la livraison
+
+**Question 14 **:   Nombre de commande par ville
+
+| seller_city     | COUNT(order_item_id) |
+| --------------- | -------------------- |
+| 04482255        | 1                    |
+| abadia de goias | 1                    |
+| aafonso claudio | 6                    |
+| aguas claras df | 1                    |
+| alambari        | 5                    |
+
+
+
+**Question 15 **:   Prix minimum des commandes
+
+0 €
+
+**Question 16** :   Prix maximum des commandes
+
+13664,08 €
+
+**Question 17 **:    Le temps moyen d'une livraison par mois
+
+
+
