@@ -23,19 +23,18 @@ q2 = "SELECT COUNT(DISTINCT product_id) FROM products"
 q3 = "SELECT product_category_name, COUNT(product_id) FROM products GROUP BY product_category_name"
 q4 = "SELECT COUNT(DISTINCT order_id) FROM orders"
 q5 = "SELECT order_status, COUNT(order_id) FROM orders GROUP BY order_status"
-# q6 = "SELECT COUNT(*) AS count,order_approved_at,strftime('%m',order_approved_at) as "Month", strftime('%Y',order_approved_at) as "YEAR" FROM orders" 1 = 8069*
-# SELECT COUNT(*) AS count,order_approved_at,strftime('%m',order_approved_at) as "Month", strftime('%Y',order_approved_at) as "YEAR" FROM orders"
+q6 = "SELECT COUNT(*) as orders, strftime('%m-%Y', order_purchase_timestamp) as month from orders group by month ORDER BY order_purchase_timestamp;"
 q7 = "SELECT order_id, AVG(payment_value) FROM order_payments"
 q8 = "SELECT order_id, AVG(review_score) FROM order_reviews"
 q9 = "SELECT COUNT(DISTINCT seller_id) FROM sellers"
 q10 = "SELECT seller_state, COUNT(seller_id) FROM sellers GROUP BY seller_state"
 q11 = "SELECT product_category_name,COUNT(order_item_id) FROM products INNER JOIN order_items ON products.product_id = order_items.product_id GROUP BY products.product_category_name;"
-#q12 = Nombre de commande par jours
-#q13 = Durée moyenne entre la commande et la livraison
+q12 = "SELECT AVG(orders) as 'order/day' FROM (SELECT COUNT(*) as orders, strftime('%d-%m-%Y', order_purchase_timestamp) as days from orders group by days);"
+q13 = "SELECT Cast(AVG(julianday(order_delivered_customer_date) - julianday(order_purchase_timestamp)) AS Integer) AS days FROM orders"
 q14 = "SELECT seller_city , COUNT(order_item_id) FROM order_items INNER JOIN sellers ON order_items.seller_id = sellers.seller_id  GROUP BY sellers.seller_city;"
 q15 = "SELECT MIN(payment_value) FROM order_payments;"
 q16 = "SELECT MAX(payment_value) FROM order_payments;"
-#q17 = Le temps moyen d'une livraison par mois
+q17 = "SELECT Cast(AVG(julianday(order_delivered_customer_date) - julianday(order_purchase_timestamp)) AS Integer) AS days, strftime('%m-%Y', order_purchase_timestamp) FROM orders group by strftime('%m-%Y', order_purchase_timestamp) ORDER BY order_purchase_timestamp"
 
 
 def add_requete(conn, query):
@@ -58,14 +57,15 @@ add_requete(conn, q2)
 add_requete(conn, q3)
 add_requete(conn, q4)
 add_requete(conn, q5)
+add_requete(conn, q6)
 add_requete(conn, q7)
 add_requete(conn, q8)
 add_requete(conn, q9)
 add_requete(conn, q10)  
 add_requete(conn, q11)
-# add_requete(conn, q12)
-# add_requete(conn, q13)
+add_requete(conn, q12)
+add_requete(conn, q13)
 add_requete(conn, q14)
 add_requete(conn, q15)
 add_requete(conn, q16)
-#add_requete(conn, q17)
+add_requete(conn, q17)

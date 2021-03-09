@@ -78,7 +78,13 @@ Limit 5 info
 
 **Question 6** : Nombre de commande par mois
 
-
+| orders | month   |
+| ------ | ------- |
+| 4      | 9-2016  |
+| 324    | 10-2016 |
+| 1      | 12-2016 |
+| 800    | 01-2017 |
+| 1780   | 02-2017 |
 
 **Question 7** : Prix moyen d'une commande
 
@@ -130,37 +136,41 @@ Limit 5 info
 | alimento_bebidas          | 278                  |
 | artes                     | 209                  |
 
+**Question 12:**  Nombre de commande par jours
+
+156.85
+
+**Question 13:** Durée moyenne entre la commande et la livraison
+
+12 jours
+
+**Question 14:**  Nombre de commande par ville (ville du vendeur)
 
 
-
-
-**Question 12 **:    Nombre de commande par jours
-
-
-
-**Question 13** :    durée moyenne entre la commande et la livraison
-
-**Question 14 **:   Nombre de commande par ville
 
 | seller_city     | COUNT(order_item_id) |
 | --------------- | -------------------- |
 | 04482255        | 1                    |
 | abadia de goias | 1                    |
-| aafonso claudio | 6                    |
+| afonson claudio | 6                    |
 | aguas claras df | 1                    |
 | alambari        | 5                    |
 
+**Question 15:** Prix minimum des commandes
 
+0€
 
-**Question 15 **:   Prix minimum des commandes
+**Question 16:**  Prix maximum des commandes
 
-0 €
+13664.08€
 
-**Question 16** :   Prix maximum des commandes
+**Question 17:**  Le temps moyen d'une livraison par mois
 
-13664,08 €
-
-**Question 17 **:    Le temps moyen d'une livraison par mois
-
-
+| days | month   |
+| ---- | ------- |
+| 54   | 09-2016 |
+| 19   | 10-2016 |
+| 4    | 12-2016 |
+| 12   | 01-2017 |
+| 13   | 02-2017 |
 
