@@ -2,10 +2,6 @@
 
 # Contexte du projet
 
-A partir de:
-si vous l’avez fait, la mise en pratique 1 (entraînement militaire ) 
-ou la mise en pratique 0 (agence immobilière)
-
 Vous intégrez une société de e-commerce en tant que Developpeur IA et votre première mission consiste à les aider sur la refonte de leur base de données.
 La société a déjà récolté de la donnée et une première proposition a été réalisée. Cette proposition vous sera partagée ainsi que la donnée dans un second temps.
 La première étape de votre projet consiste à proposer votre propose vision sur la conception de la base de donnée.
