@@ -94,13 +94,7 @@ Limit 5 info
 
 **Question 8** : Score de satifaction moyen
 
-| order_id                         | AVG(review_score) |
-| -------------------------------- | ----------------- |
-| 00010242fe8c5a6d1ba2dd792cb16214 | 5                 |
-| 00018f77f2f0320c557190d7a144bdd3 | 4                 |
-| 000229ec398224ef6ca0657da4fc703e | 5                 |
-| 00024acbcdf0a6daa1e931b038114c75 | 4                 |
-| 00042b26cf59d7ce69dfabb4e55b4fd9 | 4                 |
+4.07
 
 **Question 9** : Nombre de vendeur
 
