@@ -58,19 +58,19 @@ LIMIT 5 info
 
 **Question 4 :**  Nombre de commande total 
 
-| COUNT(dinstinct order_id) |      |
-| ------------------------- | ---- |
-| 99441                     |      |
+| COUNT(dinstinct order_id) |
+| ------------------------- |
+| 99441                     |
 
 **Question 5** :  Nombre de commande selon leurs états
 
-| order_status |      | count(ORDER_ID) |
-| ------------ | ---- | --------------- |
-| APPROVED     |      | 2               |
-| CANCELED     |      | 625             |
-| CREATED      |      | 5               |
-| DELIVERED    |      | 96478           |
-| INVOICED     |      | 314             |
+| order_status | count(ORDER_ID) |
+| ------------ | --------------- |
+| APPROVED     | 2               |
+| CANCELED     | 625             |
+| CREATED      | 5               |
+| DELIVERED    | 96478           |
+| INVOICED     | 314             |
 
 Limit 5 info
 
